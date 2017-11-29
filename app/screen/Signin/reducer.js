@@ -13,23 +13,25 @@ const INITIAL_STATE = {
     email: '',
     password: '',
   },
-  validToken: false
+  validToken: false,
 };
 
 //actions
 function submit(values, url) {
   return dispatch => {
-    dispatch({type: types.USER_FETCHED});
+    dispatch({ type: types.USER_FETCHED });
 
-    return axios.post(url, values)
+    return axios
+      .post(url, values)
       .then(
         response => {
           response.json();
-        }, error => {
+        },
+        error => {
           console.log(error);
         }
       )
-      .then(json => 
+      .then(json =>
         dispatch({ type: types.USER_FETCHED, payload: response.data })
       );
   };
@@ -44,21 +46,25 @@ export function signup(values) {
 }
 
 export function logout() {
-  return {action: types.TOKEN_VALIDATED, payload: false};
+  return { action: types.TOKEN_VALIDATED, payload: false };
 }
 
 export function validateToken(token) {
   return dispatch => {
     if (token) {
-      axios.post(`${API.OPEN_URL}/validateToken`, { token })
+      axios
+        .post(`${API.OPEN_URL}/validateToken`, { token })
         .then(response => {
-          dispatch({ type: types.TOKEN_VALIDATED, payload: response.data.valid });
+          dispatch({
+            type: types.TOKEN_VALIDATED,
+            payload: response.data.valid,
+          });
         })
         .catch(error => {
           dispatch({ type: types.TOKEN_VALIDATED, payload: false });
         });
     } else {
-      dispatch({ type: types.TOKEN_VALIDATED, payload: false });  
+      dispatch({ type: types.TOKEN_VALIDATED, payload: false });
     }
   };
 }
@@ -80,4 +86,4 @@ export default function authReducer(state = INITIAL_STATE, action) {
     default:
       return state;
   }
-};
+}

@@ -16,10 +16,14 @@ import {
 import styles from './styles';
 import Signin from './SigninComponent';
 
-const mapStateToProps = state => ({ 
+const mapStateToProps = state => ({
   tabSelected: state.tabsReducer.tabSelected,
-  user: state.auth.user
+  user: state.auth.user,
 });
-const mapDispatchToProps = dispatch => bindActionCreators({ requestLogin, requestSignup, requestValidateToken }, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    { requestLogin, requestSignup, requestValidateToken },
+    dispatch
+  );
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signin);

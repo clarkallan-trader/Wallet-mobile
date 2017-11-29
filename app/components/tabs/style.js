@@ -1,5 +1,4 @@
 // @flow
-import { StyleSheet } from 'react-native';
 import Colors from '../theme/Colors';
 
 const tabStyle = {

@@ -19,8 +19,8 @@ const RootNavigator = StackNavigator({
     screen: Confirmation,
     navigationOptions: {
       header: ({ goBack }) => {
-        left: <Left onPress={goBack} />
-      }
+        left: <Left onPress={goBack} />;
+      },
     },
   },
   Signin: {
@@ -35,7 +35,6 @@ const RootNavigator = StackNavigator({
       header: <View />,
     },
   },
-  
 });
 
 export default RootNavigator;

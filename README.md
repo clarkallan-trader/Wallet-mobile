@@ -79,3 +79,6 @@ https://medium.com/@danielskripnik/how-to-add-and-remove-custom-fonts-in-react-n
 ### Adicionado SplashScreen
 https://github.com/react-native-component/react-native-smart-splash-screen
 
+### Lista de Icones
+https://oblador.github.io/react-native-vector-icons/
+

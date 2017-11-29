@@ -22,7 +22,7 @@
       "outDir": "${workspaceRoot}/.vscode/.react",
       "port": 19002
     },
-  {
+    {
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
