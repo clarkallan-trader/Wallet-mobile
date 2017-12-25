@@ -1,8 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
+// @flow
 import Confirmation from './ConfirmationComponent';
-export { Confirmation };
+import ConfirmationContainer from './ConfirmationContainer';
+export { Confirmation, ConfirmationContainer };
