@@ -7,7 +7,7 @@ import { Header } from '../components';
 import { Introduction } from '../screen/Introduction';
 import { SigninContainer } from '../screen/Signin';
 import { Main } from '../screen/Main';
-import { ConfirmationContainer } from '../screen/Confirmation';
+import { ConfirmationContainer } from '../screen/Confirmation2';
 
 const RootNavigator = StackNavigator({
   Signin: {
